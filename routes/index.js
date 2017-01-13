@@ -25,6 +25,7 @@ router.post('/movies', (req, res, next) => {
         console.log('reached inside authentication if-else block')
         res.redirect('/movies')
         client.increment('Entering_MoviesPage')
+        client.timing('response_time', 42)
       }
       else {
         console.log('failed to go inside authentication if-else block')
