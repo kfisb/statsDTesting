@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1 Login to Kevin and Dan's Super Cool Movies App
+  form(name='login' method='POST' action='/movies')
+    p
+        label(for="username") Username 
+        <br>
+        input(id='username', name='username', type='text')
+    p
+        label(for="password") Password 
+        <br>
+        input(id='password', name='password', type='text')
+    p
+        input(type='submit', id='submit-btn', name='submit-btn', value='Login')
